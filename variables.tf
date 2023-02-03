@@ -20,3 +20,7 @@ variable "ec2_name" {
   default = "LexisNexisAssignment"
   type    = string
 }
+
+variable "key_name" {
+  default = "assignmentkey"
+}
