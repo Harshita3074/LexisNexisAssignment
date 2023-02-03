@@ -1,27 +1,27 @@
 pipeline {
     agent any
     stages{
-        stage("checkout"){
+        stage('checkout'){
             steps{
-                sh
+                checkout scm
             }
         }
-        stage("initialize"){
+        stage('initialize'){
             steps{
-                echo "initializizng terraform"
-                sh "terraform init"
+                echo 'initializizng terraform'
+                sh 'terraform init'
             }
         }
-        stage("plan"){
+        stage('plan'){
             steps{
-                echo "running terraform plan to verify"
-                sh "terraform plan"
+                echo 'running terraform plan to verify'
+                sh 'terraform plan'
             }
         }
-        stage("apply"){
+        stage('apply'){
             steps{
-                echo "running terraform apply to provision infrastructure"
-                //sh "terraform apply --auto-approve"
+                echo 'running terraform apply to provision infrastructure'
+                //sh 'terraform apply --auto-approve'
             }
         }
     }
