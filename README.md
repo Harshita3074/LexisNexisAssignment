@@ -18,4 +18,4 @@ User-data is configured to install httpd and a sample index.html is created.
 
 ## Accessing Endpoint
 
-Once the server is provisioned, please access the application using the endpoint "http://<server-public-IP>" on any browser.
+Once the server is provisioned, please access the application using the endpoint "http://\<server-public-IP\>" on any browser.
