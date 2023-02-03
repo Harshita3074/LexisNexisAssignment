@@ -19,9 +19,21 @@ pipeline {
             }
         }
         stage('apply'){
+            input{
+                message "Do you want to proceed for infra deployment?"
+            }
             steps{
                 echo 'running terraform apply to provision infrastructure'
-                //sh 'terraform apply --auto-approve'
+                sh 'terraform apply --auto-approve'
+            }
+        }
+        stage('destroy'){
+            input{
+                message "Do you want to proceed for infra destruction?"
+            }
+            steps{
+                echo 'running terraform destroy to delete infrastructure'
+                sh 'terraform destroy --auto-approve'
             }
         }
     }
